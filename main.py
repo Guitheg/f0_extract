@@ -20,8 +20,11 @@ def main():
         pas = int(sys.argv[3])*0.001
         seuilmin = int(sys.argv[4])
         seuilmax = int(sys.argv[5])
-    else : 
+    elif len(sys.argv) == 1: 
         print("usage : <filename> <taille_fenetre> <pas_glissement> <seuilmin> <seuilmax>")
+    else:
+        print("usage : <filename> <taille_fenetre> <pas_glissement> <seuilmin> <seuilmax>")
+        sys.exit()
 
     signal, params, _, time_step = load_sound(file, p=1)
 
